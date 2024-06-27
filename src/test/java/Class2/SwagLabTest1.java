@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class swaglab {
+public class SwagLabTest1 {
     public static void main(String[] args) {
         WebDriver driver=new FirefoxDriver();
         driver.get("https://www.saucedemo.com/");
@@ -23,7 +23,7 @@ public class swaglab {
 
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -34,7 +34,24 @@ public class swaglab {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
+        driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(By.id("remove-sauce-labs-backpack")).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        driver.findElement(By.className("inventory_item_name")).click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         driver.quit();
     }
 }
