@@ -2,24 +2,26 @@ package Class2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class SwagLabClassNameTest {
+public class SwagLabCssSelectorTest {
+
     public static void main(String[] args) {
-        WebDriver driver= new FirefoxDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         System.out.println(driver.getCurrentUrl());
         System.out.println(driver.getTitle());
 
-        driver.findElement(By.name("user-name")).sendKeys("standard_user");
+        driver.findElement(By.cssSelector("input[placeholder='Username']")).sendKeys("standard_user");
         try {
-            Thread.sleep(4000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
 
-        driver.findElement(By.name("password")).sendKeys("secret_sauce");
+        driver.findElement(By.cssSelector("input[type='password']")).sendKeys("secret_sauce");
 
         try {
             Thread.sleep(2000);
@@ -28,7 +30,7 @@ public class SwagLabClassNameTest {
         }
 
 
-        driver.findElement(By.name("login-button")).click();
+        driver.findElement(By.cssSelector("input[class='submit-button btn_action']")).click();
 
         try {
             Thread.sleep(2000);
@@ -40,4 +42,4 @@ public class SwagLabClassNameTest {
         driver.quit();
 
     }
-    }
+}
