@@ -18,19 +18,22 @@ public class AlertTest {
         Thread.sleep(2000);
 
         driver.findElement(By.id("confirmButton")).click();
-        Thread.sleep();
+        Thread.sleep(2000);
         driver.switchTo().alert().accept();
-        Thread.sleep();
+        Thread.sleep(2000);
+
         driver.findElement(By.id("confirmButton")).click();
         driver.switchTo().alert().dismiss();
-        Thread.sleep();
+        Thread.sleep(2000);
 
-        driver.findElement(By.id("PromptButton")).click();
-        Alert alert=driver.switchTo().alert()
+        driver.findElement(By.id("promtButton")).click();
+        Alert alert=driver.switchTo().alert();
 
-                alert.sendKeys("sfdsjfreghdgd fgdsjgd");
+        alert.sendKeys("sfdsjfreghdgd fgdsjgd");
         Thread.sleep(2000);
         System.out.println(alert.getText());
         alert.accept();
+
+        driver.quit();
     }
 }

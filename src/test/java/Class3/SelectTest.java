@@ -15,7 +15,7 @@ public class SelectTest {
 
         Select select=new Select(driver.findElement(By.cssSelector("select[name='country']")));
 
-        select.selectByIndex(3);
+        select.selectByIndex(4);
         Thread.sleep(200);
 
         select.selectByVisibleText("ALGERIA");

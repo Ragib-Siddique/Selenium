@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class NavigationTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new FirefoxDriver();
         driver.get("https://demo.guru99.com/test/newtours/register.php?authuser=0");
         driver.manage().window().maximize();
