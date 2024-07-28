@@ -16,7 +16,7 @@ public class WebonfoTest {
         Thread.sleep(2000);
 
 //        Conventional way:
-//        System.out.println("Tag Nanme:"+ driver.findElement(By.id("user-name")).getTagName());
+//        System.out.println("Tag Name:"+ driver.findElement(By.id("user-name")).getTagName());
 //        System.out.println("X,Y Name:"+driver.findElement(By.id("user-name")).getRect().x + " " +driver.findElement(By.id("user-name")).getRect().y);
 
 //        optimistic way:
