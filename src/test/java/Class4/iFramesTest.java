@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class iFramesTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver=new FirefoxDriver();
-        driver.get("https//:demoqa.com/frames");
+        driver.get("https://demoqa.com/frames");
         driver.manage().window().maximize();
 
         System.out.println("Main iFrame1:"+driver.findElement(By.className("text-center")).getText());
