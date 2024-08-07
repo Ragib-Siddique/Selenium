@@ -15,23 +15,19 @@ public class Menuitem {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
-        new Actions(driver).moveToElement(driver.findElement(By.linkText("Main Item 2")))
-                        .click().perform();
 
+        new Actions(driver).moveToElement(driver.findElement(By.linkText("Main Item 2")))
+                .click().perform();
         Thread.sleep(2000);
 
         new Actions(driver).moveToElement(driver.findElement(By.linkText("SUB SUB LIST »")))
                 .click().perform();
-
-        Thread.sleep(2000);
+            Thread.sleep(2000);
 
         new Actions(driver).moveToElement(driver.findElement(By.linkText("Sub Sub Item 2")))
                 .click().perform();
         Thread.sleep(2000);
 
-
         driver.quit();
-
-
     }
 }
